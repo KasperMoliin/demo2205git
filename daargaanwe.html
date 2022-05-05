@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function functietje(){
+            var dediv = document.getElementById("hallo");
+            var age = document.getElementById("leeftijd").value;
+            if( age >= 21 ){  //  == <  >  !=  <=  >=
+                dediv.innerHTML = "Je mag alles kopen wat je wilt";
+                dediv.style.backgroundColor = 'greenyellow';              
+               }else if( age >= 16 ){
+                dediv.innerHTML = "Je mag laag alcoholische dranken kopen";
+                dediv.style.backgroundColor = 'green';
+               } 
+              else{
+                dediv.innerHTML = "Je mag geen alcohol kopen";
+                dediv.style.backgroundColor = 'red';
+              }
+        }
+    </script>
+</head>
+<body>
+    <input id="leeftijd" >
+    <button onclick="functietje()">klik hier</button>
+    <div id="hallo" class="rood"> Voer in je leeftijd </div>
+</body>
+</html>
